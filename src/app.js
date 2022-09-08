@@ -13,6 +13,9 @@ const geoCode = require('./utils/geocode')
 //Forecast
 const forecast = require('./utils/forecast')
 
+//PORT
+const port = process.env.PORT || 3000;
+
 
 //app.com
 //app.com/help
@@ -139,6 +142,6 @@ app.get('*',(req,res,next)=>{ //is * a wild card which is everything that isn't 
     })
 })
 
-app.listen(3000, ()=>{
-    console.log(`Server is up on port 3000`)
+app.listen(port, ()=>{
+    console.log(`Server is up on port ${port}`)
 });
